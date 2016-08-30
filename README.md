@@ -9,4 +9,5 @@ This script will make it easier to export screenshots for AppStore and PlayStore
 * Run your game and press your screenshot key.
 * The script will save the pictures on a new folder "screenshots" on your project root.
 
+
 ![My image](http://i.imgur.com/RfJT5JP.png)
