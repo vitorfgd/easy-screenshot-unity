@@ -1,18 +1,23 @@
-Mobile ScreenShot - Unity Script
+Easy ScreenShot - Unity Script
 ===================
 
-This script will make it easier to export screenshots for AppStore and PlayStore.
+This script was developed to easily create screenshots for the AppStore (according to apple's size guidelines). It will also help you create your android and desktop screenshots.
+
+If every option is selected, the script will create 6 different iOS screenshots (iPhone 3.5, 4, 4.7, 5.5, iPad and iPad Pro), one android screenshot and one desktop screenshot with given size.
 
 
 How to use?
 -------------
 
-* Attach this script to your main camera.
-* Select the checkboxes that fits better for your needs. (Screenshot on AppStore format (it'll export on each size needed), Portrait or not, Android screenshot (you'll have to say what size do you want), Portrait or not, enlarge (default is pretty large), your screenshot key, etc.).
+* Attach "screenshot.cs" to your main camera.
+* Configure the script according to your needs.
+* Choose portrait or landscape. On android and desktop you'll have to specify the siz and mode you want.
+* If you selected the option to create android or desktop screenshots you can also enlarge your dimensions using the slider.
+* Select the screenshot shortcut you'd like to use to create screenshots during runtime.
 * Run your game on editor and press your screenshot key.
-* The script will save the pictures on a new folder "screenshots" on your project root.
+* The script will save the pictures on a new folder called "screenshots" on your project root.
 
-![My image](http://i.imgur.com/RfJT5JP.png)
+![gif](https://thumbs.gfycat.com/VeneratedReliableAbyssiniancat-max-14mb.gif)
 
 
 Contributing
@@ -28,4 +33,4 @@ Contributing
 Copyright
 -------------
 
-This project is under Apache 2.0 license.
+This project is under Apache 2.0 license. Use whenever you want and however you want just don't sell it!
