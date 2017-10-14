@@ -17,6 +17,9 @@ How to use?
 * Run your game on editor and press your screenshot key.
 * The script will save the pictures on a new folder called "screenshots" on your project root.
 
+Usage
+-------------
+
 ![gif](https://thumbs.gfycat.com/VeneratedReliableAbyssiniancat-size_restricted.gif)
 
 
