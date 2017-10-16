@@ -1,26 +1,27 @@
-Easy ScreenShot - Unity Script
+Easy Screenshot - Unity3D Script
 ===================
 
-This script was developed to easily create screenshots for the AppStore (according to apple's size guidelines). It will also help you create your android and desktop screenshots.
+This script was developed to easily create screenshots for the AppStore (according to Apple's screenshot size guidelines). It will also help you create your android and desktop screenshots.
 
-If every option is selected, the script will create 6 different iOS screenshots (iPhone 3.5, 4, 4.7, 5.5, iPad and iPad Pro), one android screenshot and one desktop screenshot with given size.
+If every option is selected, the script should create 6 different iOS screenshots (iPhone 3.5, 4, 4.7, 5.5, iPad and iPad Pro), one android screenshot and one desktop screenshot with given size.
 
 
-How to use?
--------------
+## How to use?
 
-* [EASY] Import the unity package located under unitypackage/easyscreenshot.unitypackage;
+### Easy way:
 
-OR
+* Import the unity package located under unitypackage/easyscreenshot.unitypackage;
 
-* Attach "screenshot.cs" to your main camera.
-* Create a new folder called "Editor", if it does not exists, in your project root. Drag the script Editor/ScreenshotEditor.cs to the new folder.
+### Hard way:
+
+* Attach **"Assets/Scripts/screenshot.cs"** to your main camera.
+* Create a new folder called **"Editor"**, if it does not exists, under your assets folder. Drag the script **"Assets/Editor/ScreenshotEditor.cs"** to the new folder.
 * Configure the script according to your needs.
-* Choose portrait or landscape. On android and desktop you'll have to specify the siz and mode you want.
+* Choose portrait or landscape. On android and desktop, you'll have to specify the size and mode you want.
 * If you selected the option to create android or desktop screenshots you can also enlarge your dimensions using the slider.
 * Select the screenshot shortcut you'd like to use to create screenshots during runtime.
-* Run your game on editor and press your screenshot key.
-* The script will save the pictures on a new folder called "screenshots" on your project root.
+* Run your game in the editor and press your screenshot key.
+* The script will save the pictures to a new folder called "screenshots" on your project root.
 
 
 Usage
