@@ -9,13 +9,22 @@ If every option is selected, the script will create 6 different iOS screenshots 
 How to use?
 -------------
 
+* [EASY] Import the unity package located under unitypackage/easyscreenshot.unitypackage;
+
+OR
+
 * Attach "screenshot.cs" to your main camera.
+* Create a new folder called "Editor", if it does not exists, in your project root. Drag the script Editor/ScreenshotEditor.cs to the new folder.
 * Configure the script according to your needs.
 * Choose portrait or landscape. On android and desktop you'll have to specify the siz and mode you want.
 * If you selected the option to create android or desktop screenshots you can also enlarge your dimensions using the slider.
 * Select the screenshot shortcut you'd like to use to create screenshots during runtime.
 * Run your game on editor and press your screenshot key.
 * The script will save the pictures on a new folder called "screenshots" on your project root.
+
+
+Usage
+-------------
 
 ![gif](https://thumbs.gfycat.com/VeneratedReliableAbyssiniancat-size_restricted.gif)
 
