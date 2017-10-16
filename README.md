@@ -3,7 +3,7 @@ Easy ScreenShot - Unity Script
 
 This script was developed to easily create screenshots for the AppStore (according to apple's size guidelines). It will also help you create your android and desktop screenshots.
 
-If every option is selected, the script will create 6 different iOS screenshots (iPhone 3.5, iPhone 4, iPhone 4.7, iPhone 5.5, iPad and iPad Pro), one android screenshot and one desktop screenshot with given size.
+If every option is selected, the script will create 6 different iOS screenshots (iPhone 3.5, 4, 4.7, 5.5, iPad and iPad Pro), one android screenshot and one desktop screenshot with given size.
 
 
 How to use?
@@ -16,9 +16,6 @@ How to use?
 * Select the screenshot shortcut you'd like to use to create screenshots during runtime.
 * Run your game on editor and press your screenshot key.
 * The script will save the pictures on a new folder called "screenshots" on your project root.
-
-Usage
--------------
 
 ![gif](https://thumbs.gfycat.com/VeneratedReliableAbyssiniancat-size_restricted.gif)
 

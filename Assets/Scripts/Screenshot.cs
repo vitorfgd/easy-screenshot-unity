@@ -45,24 +45,15 @@ public class Screenshot : MonoBehaviour {
 	public static string ScreenShotName(int photoNumber, string plataform, int width, int height){
 		return string.Format("{0}/../screenshots/" + photoNumber + "_" + plataform + "screen_{1}x{2}_{3}.png", Application.dataPath, width, height, System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss"));
 	}
-	
-	public void TakeHiResShot(){;
-		takeHiResShot = true;
-	}
 
 	void LateUpdate(){
 
-		foreach(KeyCode vKey in System.Enum.GetValues(typeof(KeyCode))){
-			if(Input.GetKey(vKey)){
-				if (vKey == screenshotKey){
-					takeHiResShot = true;
-				}
-			}
+		if(Input.GetKey(screenshotKey)){
+			takeHiResShot = true;
 		}
 
 		if (takeHiResShot){
-
-			//get the picture number so no matter how many times you close your unity editor screenshots will always be on a timeline.
+			
 			picture = PlayerPrefs.GetInt ("PhotoNumber");
 			picture ++;
 			PlayerPrefs.SetInt ("PhotoNumber", picture);
@@ -88,24 +79,34 @@ public class Screenshot : MonoBehaviour {
 	}
 
 	public void LandScapeiOS (){
+		
 		for (int i = 0; i < iOSRes.Length; i += 2){
+			
 			TextureFormat textForm = nonTransp;
 
 			if (transparent)
 				textForm = transp;
 
-			if (i == 0)
+			switch (i) {
+			case 0: 
 				size = "3.5";
-			else if (i == 2)
+				break;
+			case 2:
 				size = "4";
-			else if (i == 4)
+				break;
+			case 4:
 				size = "4.7";
-			else if (i == 6)
+				break;
+			case 6:
 				size = "5.5";
-			else if (i == 8)
+				break;
+			case 8:
 				size = "iPad";
-			else if (i == 10)
+				break;
+			case 10: 
 				size = "iPadPro";
+				break;
+			}
 
 			RenderTexture rt = new RenderTexture(iOSRes[i], iOSRes[i+1], 24);
 			Camera.main.targetTexture = rt;
@@ -119,7 +120,7 @@ public class Screenshot : MonoBehaviour {
 			byte[] bytes = screenShot.EncodeToPNG();
 			string filename = ScreenShotName(picture, "IOS_" + size + "_LANDSCAPE+", iOSRes[i] * enlarge, iOSRes[i+1] * enlarge);
 			
-			if (Directory.Exists(Application.dataPath + "/../screenshots/") == false)
+			if (!Directory.Exists(Application.dataPath + "/../screenshots/"))
 				Directory.CreateDirectory(Application.dataPath + "/../screenshots/");
 			
 			System.IO.File.WriteAllBytes(filename, bytes);
@@ -128,24 +129,34 @@ public class Screenshot : MonoBehaviour {
 	}
 
 	public void PortraitiOS (){
+		
 		for (int i = 0; i < iOSRes.Length; i += 2){
+			
 			TextureFormat textForm = nonTransp;
 
 			if (transparent)
 				textForm = transp;
 
-			if (i == 0)
+			switch (i) {
+			case 0: 
 				size = "3.5";
-			else if (i == 2)
+				break;
+			case 2:
 				size = "4";
-			else if (i == 4)
+				break;
+			case 4:
 				size = "4.7";
-			else if (i == 6)
+				break;
+			case 6:
 				size = "5.5";
-			else if (i == 8)
+				break;
+			case 8:
 				size = "iPad";
-			else if (i == 10)
+				break;
+			case 10: 
 				size = "iPadPro";
+				break;
+			}
 
 			RenderTexture rt = new RenderTexture(iOSRes[i+1], iOSRes[i], 24);
 			Camera.main.targetTexture = rt;
@@ -159,7 +170,7 @@ public class Screenshot : MonoBehaviour {
 			byte[] bytes = screenShot.EncodeToPNG();
 			string filename = ScreenShotName(picture, "IOS_" + size + "_PORTRAIT+", iOSRes[i+1] * enlarge, iOSRes[i] * enlarge);
 			
-			if (Directory.Exists(Application.dataPath + "/../screenshots/") == false)
+			if (!Directory.Exists(Application.dataPath + "/../screenshots/"))
 				Directory.CreateDirectory(Application.dataPath + "/../screenshots/");
 			
 			System.IO.File.WriteAllBytes(filename, bytes);
@@ -192,7 +203,7 @@ public class Screenshot : MonoBehaviour {
 		byte[] bytes = screenShot.EncodeToPNG();
 		string filename = ScreenShotName(picture, "ANDROID+", android_width * enlarge, android_height * enlarge);
 
-		if (Directory.Exists(Application.dataPath + "/../screenshots/") == false)
+		if (!Directory.Exists(Application.dataPath + "/../screenshots/"))
 			Directory.CreateDirectory(Application.dataPath + "/../screenshots/");
 
 		System.IO.File.WriteAllBytes(filename, bytes);
@@ -224,7 +235,7 @@ public class Screenshot : MonoBehaviour {
 		byte[] bytes = screenShot.EncodeToPNG();
 		string filename = ScreenShotName(picture, "PC+", pc_width * enlarge, pc_height * enlarge);
 
-		if (Directory.Exists(Application.dataPath + "/../screenshots/") == false)
+		if (!Directory.Exists(Application.dataPath + "/../screenshots/"))
 			Directory.CreateDirectory(Application.dataPath + "/../screenshots/");
 
 		System.IO.File.WriteAllBytes(filename, bytes);
